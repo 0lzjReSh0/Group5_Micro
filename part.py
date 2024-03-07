@@ -34,7 +34,7 @@ def get_part_by_id(part_id):
     if part:
         return jsonify({part_id: part})
     else:
-        return jsonify({'error': 'Part not found'}), 404
+        return jsonify({'error': 'Part not exist'}), 404
 
 @app.route('/parts', methods=['GET'])
 def get_part_by_name():
